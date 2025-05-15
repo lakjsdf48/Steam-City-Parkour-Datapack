@@ -1,0 +1,1 @@
+Ignore the spyglass.json file, it is there because we are not allowed to update our vscode extensions.

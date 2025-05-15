@@ -1,0 +1,10 @@
+{
+    "values": [
+        "barrier",
+        "air",
+        "cave_air",
+        "void_air",
+        "chiseled_tuff",
+        "#slabs"
+    ]
+}

@@ -1,0 +1,1 @@
+give @s rabbit_spawn_egg[entity_data={id:rabbit,Tags:["courseStarter"]}]
