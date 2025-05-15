@@ -15,6 +15,7 @@ scoreboard objectives add yMotion dummy
 scoreboard objectives add vulnerable dummy
 scoreboard objectives add slideTime dummy
 
+scoreboard objectives add playerId dummy
 scoreboard objectives add courseId dummy
 scoreboard objectives add objectiveTime.Ticks dummy
 scoreboard objectives add displayTime.Ticks dummy

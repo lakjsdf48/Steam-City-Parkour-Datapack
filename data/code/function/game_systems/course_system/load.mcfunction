@@ -1,0 +1,1 @@
+#This is not a load function, it grabs the speedrun time of a player on a specific course.

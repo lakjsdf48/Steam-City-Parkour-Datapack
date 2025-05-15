@@ -16,7 +16,14 @@ execute as @a[tag=is_dev] run attribute @s entity_interaction_range base set 4.5
 effect give @a saturation infinite 255 true
 effect give @a resistance infinite 255 true
 
+###Game Code
+
 ##Course System
+#Player Ids
+execute as @a unless score @s playerId matches -2147483648..2147483647 run function code:game_systems/course_system/course_system/assign_player_id
+
+#Course Timer
+scoreboard players add @a[tag=inCourse] objectiveTime.Ticks 1
 
 #Checkpoints
 execute as @a at @s if block ~ ~-1 ~ #code:checkpoints/full/start run function code:game_systems/course_system/course_system/course_start
@@ -33,8 +40,8 @@ execute as @a[scores={resetCheckpoint=1..}] run function code:game_systems/cours
 
 #Course Builder
 execute as @e[tag=courseStarter] at @s align xyz positioned ~.5 ~ ~.5 run function code:game_systems/course_system/course_system/create_course_start
-
-execute as @e[tag=courseIdentifier] at @s unless block ~ ~-.25 ~ #code:checkpoints/full/start run function code:game_systems/course_system/course_system/clear_identifier
+#scoreboard players reset @a courseId
+execute as @e[tag=courseIdentifier] at @s unless block ~ ~-.25 ~ #code:checkpoints/full/start run function dev:course_stuff/clear_identifier
 
 ##Custom Block Effects
 #Kill Blocks
